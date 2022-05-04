@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Les sujets</title>
+</head>
+<body>
+    <h1>Liste des sujets</h1>
+    <a th:href="@{/sujets/ajout}">Ajouter</a>
+    <table>
+        <thead>
+        <tr>
+            <th>Num</th>
+            <th>Libelle</th>
+            <th></th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="s:${sujets}">
+            <th th:text="${s.num}">Num</th>
+            <td th:text="${s.libelle}">Libelle</td>
+        </tr>
+        </tbody>
+    </table>
+</body>
+</html>
